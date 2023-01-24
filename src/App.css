@@ -1,0 +1,117 @@
+.App{
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+ }
+ 
+ .countries{
+    height: 80%;
+  display: flex;
+     flex-direction: column;
+ }
+ 
+ .countrieslist button{
+ 
+     width: 70px;
+     align-items: center;
+    margin: 40px;
+    border-radius: 5px;
+  }
+ 
+ .countries img, .restaurant img{
+ 
+     height: 300px;
+     width: 300px;
+     border-radius: 250px;
+ }
+ 
+ span{
+ 
+    text-decoration: underline;
+ }
+ 
+ form{
+ 
+    display: flex;
+    
+    flex-direction: column;
+    gap: 5px;
+ }
+ 
+ input{
+ 
+    height: 80px;
+    width: 200px;
+    font-size: larger;
+ }
+ 
+ textarea{
+ 
+    font-size: larger;
+ }
+ 
+ .footer{
+ 
+    height: 20%;
+ }
+ 
+ @media screen and (min-width:992px) {
+ 
+  .countries, .restaurant{
+     height: 80%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+   
+     gap: 150px;
+  }
+ 
+  .countrieslist{
+ 
+     display: flex;
+     flex-direction: column;
+  }
+ 
+  .countrieslist button{
+ 
+     width: 70px;
+     align-items: center;
+     margin-left: 110px;
+     margin-top: 30px;
+     border-radius: 3px;
+  }
+ 
+ .countries img, .restaurant img {
+ 
+     height: 300px;
+     width: 300px;
+     border-radius: 250px;
+ }
+ 
+ .restaurantlist{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+ 
+ 
+ 
+ .dishes{
+ 
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+ }
+ 
+ .dishes img{
+ 
+    height: 300px;
+    width: 300px;
+ }
+ 
+ }
