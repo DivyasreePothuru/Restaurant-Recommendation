@@ -9,7 +9,6 @@ width: 100%;
  
  }
 
-
  .header{
    width: 100%;
    font-family: 'Explora', cursive;
@@ -43,6 +42,22 @@ width: 100%;
    margin: 50px;
  }
 
+.countries, .countrieslist{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.countrieslist button{
+   width: 130px;
+   margin-left: 70px;
+   font-size: 30px;
+   background-color:#0a0a23;
+   color: #fff;
+   border:none;
+   border-radius:10px;
+   box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+   
+}
 
  .countries img, .restaurant img{
  
@@ -80,15 +95,6 @@ width: 100%;
  
  @media screen and (min-width:992px) {
  
-  /* .countries, .restaurant{
-    
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-   
-     gap: 150px;
-  } */
-
   .App{
    height: 100%;
    width: 100%;
@@ -101,7 +107,7 @@ width: 100%;
 
   .header{
    text-align: left;
-   padding: 20px;
+   padding: 10px;
   
   }
   .footer{
@@ -113,26 +119,44 @@ width: 100%;
    padding: 10px;
   
  }
-.footercopy{
-   margin:10px;
-   padding: 5px;
-}
+
  
+ .countries, .restaurant{
+    
+     display: flex;
+     flex-direction: row;
+     align-items: center; 
+     gap: 120px;
+     margin-right: 40px;
+     margin-left: 40px;
+     
+  }
   .countrieslist{
  
      display: flex;
      flex-direction: column;
+     
   }
  
   .countrieslist button{
- 
-     width: 70px;
-     align-items: center;
-     margin-left: 110px;
-     margin-top: 30px;
-     border-radius: 15px 50px;
+ text-align: center;
+     width: 80px;
+     margin-left: 120px;
+   font-size: 10px;
+   background-color:#0a0a23;
+   color: #fff;
+   border:none;
+   border-radius:10px;
+   box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+     
   }
- 
+  .countrieslist button:hover {
+   text-align: center;
+   font-size: 20px;
+   width: 100px;
+   background-color:#002ead;
+   transition: 0.7s;
+}
  .countries img, .restaurant img {
  
      height: 300px;
