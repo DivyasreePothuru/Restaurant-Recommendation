@@ -23,7 +23,7 @@ function restaurantHandler(e){
 
 function reviewhandler(e){
 
-  setRestaurant_id(e.target.value)
+  setRestaurant_id(Number(e.target.value))
   console.log(e.target.name);
   navigate('/reviews')
 }

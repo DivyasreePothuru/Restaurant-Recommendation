@@ -10,6 +10,9 @@ import { Routes ,Route } from 'react-router-dom';
 import Restaurant from './Components/Restaurant';
 import Dishes from './Components/Dishes';
 import Reviews from './Components/Reviews';
+import Footer from './Components/Footer';
+
+
 
 
 export const AppContext = createContext()
@@ -26,6 +29,7 @@ const[review,setReview] = useState('')
 const[restaurant_id,setRestaurant_id] = useState('')
 const[user,setUser] = useState('')
 const[text,setText] = useState('')
+const[stars,setStars] = useState('')
 
 
 
@@ -54,6 +58,7 @@ useEffect (()=> {
    
    <Header />
   
+<div className='home'>
 
   
   <AppContext.Provider value={{countries, 
@@ -65,9 +70,9 @@ useEffect (()=> {
   review,
   restaurant_id,setRestaurant_id,
   user,setUser,
-  text,setText
-  
-  }}>
+  text,setText,
+  stars,setStars
+}}>
 
 <Routes >
 
@@ -82,7 +87,8 @@ useEffect (()=> {
 
   </AppContext.Provider>
 
-   
+</div>
+ <Footer />
     </div>
   );
 }

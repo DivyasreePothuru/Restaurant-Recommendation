@@ -10,9 +10,7 @@ const {countries,setRestaurantid} = useContext(AppContext)
 
 function countryHandler (e){
 
-//  console.log(e.target.name);
 
-// console.log(e.target.value)
 setRestaurantid(e.target.value)
 
 navigate('/restaurant')
