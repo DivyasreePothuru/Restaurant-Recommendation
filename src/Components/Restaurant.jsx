@@ -38,21 +38,28 @@ function buttonHandler(){
 
   return (
     <>
-    <button onClick={buttonHandler}>Back</button>
+    <button className='restaurantbutton' onClick={buttonHandler}>Back</button>
     <div className='restaurant'>
-    
-    
+      
     {
       selectrestaurant && selectrestaurant.filter((i,j)=> i.country_id== restaurantid  ).map((i,j) => <div className='restaurantlist' key={j}>
           
           <img src={i.image} alt="" />
-          <button name={i.id} value={i.id} onClick={restaurantHandler}>{i.name}</button>
+          <div className='a'>
 
-          <h3> <span>Address</span> :{i.Address}</h3>
-           <button name={i.id}  value={i.id} onClick={reviewhandler}>Reviews</button>
-        
+          <button name={i.id} value={i.id} onClick={restaurantHandler}>{i.name}</button>
+          <button name={i.id}  value={i.id} onClick={reviewhandler}>Reviews</button>
+          </div>
+          {/* <h3> <span>Address</span> :{i.Address}</h3> */}
           
-          </div>)
+          </div>
+          
+          
+          
+          
+          
+          
+          )
     }
     </div>
     </>

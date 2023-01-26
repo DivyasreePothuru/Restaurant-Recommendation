@@ -9,13 +9,17 @@ const {dishid,dishes} = useContext(AppContext)
 
 const navigate = useNavigate()
 
+
 function buttonHandler(){
   navigate('/restaurant')
 }
+ 
   return (
 
-    <>
-    <button onClick={buttonHandler}> Back</button>
+    <div >
+
+    <button className='dishesbutton' onClick={buttonHandler}> Back </button>
+    
     <div className='dishes'>
 
 {dishes && dishes.filter((i) => dishid==i.restaurant_id).map((i,j) => <div className='disheslist' key={j}>
@@ -27,7 +31,7 @@ function buttonHandler(){
 
 
     </div>
-    </>
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ const{review,restaurant_id,text,setText, user,setUser,stars,setStars} = useConte
 
 function buttonhandler(){
 
-  navigate('/')
+  navigate('/restaurant')
 }
 
 let a= <><FaStar color='orange' /> <FaStar color='orange' /> <FaStar color='orange' /> <FaStar color='orange'/> <FaStar color='orange' /></>
@@ -42,9 +42,9 @@ if((Number(restaurant_id))) {
 
 
   return (
-<>
+<div className='review1'>
 
-<button onClick={buttonhandler}> back</button>
+<button className='reviewbutton' onClick={buttonhandler}> back</button>
   <form onSubmit={inputhandler}>
     <input type="text" name="input" placeholder='enter your name'  onChange={(e)=>setUser(e.target.value)}/>
     <input placeholder='rating' name='rating' type="number" onChange={(e)=>setStars(Number(e.target.value)) } />
@@ -56,13 +56,13 @@ if((Number(restaurant_id))) {
     
       {review.filter(i => i.restaurant_id == restaurant_id).map((i,j) => <div className='reviewlist' key={j}> {i.user}  {i.text} 
  
-      {i.stars ===5? <p>{a}</p> : 
+    <div className='stars'>{i.stars ===5? <p>{a}</p> : 
        i.stars ===4 ? <p> {b}</p> : 
        i.stars ===3?<p>{c}</p> :
        i.stars ===2?<p>{d}</p>: <p>{e}</p>
 
  
- } 
+ } </div>  
  </div>)}
 
  {/* {review.find(i => i.restaurant_id == restaurant_id)?.stars ===5? <p>5</p> : 
@@ -72,7 +72,7 @@ review.find(i => i.restaurant_id == restaurant_id)?.stars ===4 ? <p>4</p> : 3
  }  */}
 
     </div>
-</>
+</div>
   )
 }
 

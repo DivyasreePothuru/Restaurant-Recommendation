@@ -22,7 +22,7 @@ navigate('/restaurant')
 
 {countries && countries.map((i,j) => <div className='countrieslist' key={j}>
 
-  <img src={i.img} alt="" />
+  < img src={i.img} alt="" />
   <button name={i.id} value={i.id}  onClick={countryHandler}>{i.name}</button>
 
 </div>)}
